@@ -7,10 +7,11 @@ let choices = ["rock","paper","sissor"];
 let result;
 
 let userChoice;
+let botChoice;
 
 let choose = (e) => {
+    botChoice = choices[Math.floor(Math.random() * 3)];
     userChoice = e.target.id;
-    console.log("you choose "+userChoice);
     if (userChoice == "rock" && botChoice == "paper") {
         result = "you lose";
     } else if (userChoice == "paper" && botChoice == "sissor"){
@@ -18,18 +19,13 @@ let choose = (e) => {
     } else if (userChoice == "sissor" && botChoice == "rock"){
         result = "you lose";
     } else if (userChoice == botChoice) {
-        result = "draw";
+        result = "it's draw";
     }else{
         result = "you won";
     }
-    showResult.innerText = result + " bot : " + botChoice;
+    showResult.innerText = result + ", bot choosed : " + botChoice;
 }
 
 rock.onclick = choose;
 paper.onclick = choose;
 sissor.onclick = choose;
-
-
-
-let botChoice = choices[Math.floor(Math.random() * 3)];
-

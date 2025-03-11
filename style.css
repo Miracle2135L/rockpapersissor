@@ -40,4 +40,30 @@
 
 .result {
     font-size: 50px;
-}   
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .play {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .rock, .paper, .sissor {
+        width: 80vw;
+        height: 20vh;
+        font-size: 1.5rem;
+        line-height: 20vh;
+    }
+
+    .result {
+        font-size: 30px;
+    }
+}
+
