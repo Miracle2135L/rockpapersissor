@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vw;
+}
+
+.rock {
+    background-color: #f44336;
+}
+
+.paper {
+    background-color: #2196F3;
+}
+
+.sissor {
+    background-color: #4CAF50;
+}
+
+.play {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+}
+
+.rock, .paper, .sissor {
+    width: 30vw;
+    height: 30vh;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    line-height: 30vh;
+}
+
+.result {
+    font-size: 50px;
+}   
