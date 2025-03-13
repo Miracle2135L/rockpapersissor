@@ -1,10 +1,17 @@
+body{
+    background-color: #E2EFDE;
+    text-align: center;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
+    align-self: center;
+    justify-self: center;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
-    width: 100vw;
+    height: 90vh;
+    width: 90%;
 }
 
 .rock {
@@ -24,46 +31,76 @@
     justify-content: space-around;
     align-items: center;
     height: 50vh;
-    width: 100vw;
+    width: 80vw;
 }
 
 .rock, .paper, .sissor {
-    width: 30vw;
-    height: 30vh;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     cursor: pointer;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     color: white;
     line-height: 30vh;
 }
 
-.result {
-    font-size: 50px;
+.score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background-color: #AFD0BF;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
 }
 
-@media (max-width: 768px) {
+.pscore {
+    color: #003F91;
+}
+
+.bscore {
+    color: #6D326D;
+}
+
+.result {
+    font-size: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #808F87;
+}
+
+@media (max-width: 520px) {
     .container {
-        flex-direction: column;
-        height: auto;
-        width: 100%;
+        display: flex;
+        width: 90vw;
+        align-self: center;
+        justify-self: center;
     }
 
     .play {
-        flex-direction: column;
-        height: auto;
         width: 100%;
+        height: 30vh;
     }
 
     .rock, .paper, .sissor {
-        width: 80vw;
-        height: 20vh;
+        width: 25vw;
+        height: 25vw;
         font-size: 1.5rem;
         line-height: 20vh;
     }
 
+    .score{
+        font-size: 1.5rem;
+    }
+
     .result {
-        font-size: 30px;
+        font-size: 1.7rem;
     }
 }
 

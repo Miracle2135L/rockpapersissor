@@ -20,17 +20,22 @@ let choose = (e) => {
     if (userChoice == "rock" && botChoice == "paper") {
         result = "you lose";
         botScore++;
+        showResult.style.backgroundColor = "red";
     } else if (userChoice == "paper" && botChoice == "sissor"){
         result = "you lose";
         botScore++;
+        showResult.style.backgroundColor = "red";
     } else if (userChoice == "sissor" && botChoice == "rock"){
         result = "you lose";
         botScore++;
+        showResult.style.backgroundColor = "red";
     } else if (userChoice == botChoice) {
         result = "it's draw";
+        showResult.style.backgroundColor = "gray";
     }else{
         result = "you won";
         playerScore++;
+        showResult.style.backgroundColor = "green";
     }
     showResult.innerText = "result: " + result + ", bot choosed " + botChoice;
     pScore.innerText = "your score: " + playerScore;
